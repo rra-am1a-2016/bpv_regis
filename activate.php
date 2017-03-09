@@ -1,10 +1,4 @@
 <?php
-   // Maak op deze pagina een tabel waarin wordt weergegeven:
-   // voornaam, tussenvoegsel, achternaam, gebruikersrol, potlood
-   // Zorg dat voor ieder record de gebruikersrol kan worden gewijzigd. 
-   // De administrator is de enige die op deze pagina kan komen. Regel de beveiliging
-
-   // Beveiliging van deze pagina alleen toegankelijk voor de administrator
    include("./connect_db.php");
 
    if ( isset($_POST["submit"]))
@@ -63,71 +57,47 @@
 
       var_dump($record);
       $formtekst = "";
-      $formtekst .=  "<form action='index.php?content=change_password' method='post'>
-                        <table>
-                           <tr>
-                              <td>oude wachtwoord: </td>
-                              <td><input type='password' name='old_password' ";
-                           
-                              
-                           
-      $formtekst .= "></td>
-                  </tr>
-                  <tr>
-                     <td>wachtwoord: </td>
-                     <td><input type='password' name='password'></td>
-                  </tr>
-                  <tr>
-                     <td>type nogmaals wachtwoord: </td>
-                     <td><input type='password' name='controle_password'> </td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td><input type='submit' name='submit' value='wijzig wachtwoord!'></td>
-                  </tr>
-               </table>
-               <input type='hidden' name='id' value='".$_GET["id"]."'>
+      $formtekst .=  "<form class='form-horizontal' action='index.php?content=change_password' method='post' >
+                        <div class='form-group'>
+                                <label class='control-label col-sm-2'>wachtwoord: </label> 
+                                <div class='col-sm-4'>
+                                        <input type='password'
+                                               name='password' 
+                                               required 
+                                               class='form-control' 
+                                               placeholder='wachtwoord' 
+                                               id='password'>
+                                </div>
+                                <div class='col-sm-6'>
+                                </div>
+                        </div>
+                        <div class='form-group'>
+                                <label class='control-label col-sm-2'>Tik opnieuw in: </label> 
+                                <div class='col-sm-4'>
+                                        <input type='password' 
+                                               name='verification_password' 
+                                               required class='form-control' 
+                                               placeholder='wachtwoord'
+                                               id='verification_password'>
+                                </div>
+                                <div class='col-sm-6'>
+                                </div>
+                        </div>  
+                        <div class='form-group'>
+                                <div class='col-sm-2 col-sm-10'>
+                                        <input type='submit' 
+                                               name='submit' 
+                                               required 
+                                               class='btn btn-default' 
+                                               value='wijzig'
+                                               id='verification_password'>
+                                        <input type='hidden' name='id' value='".$_GET["id"]."'>
+                                        <input type='hidden' name='pw' value='".$_GET["pw"]."'>
+                                        
+                                </div>
+                        </div>
            </form>";
 
       echo $formtekst;
 
-      exit();
-   }
-
-   // een sql-query die alle users selecteerd
-   // Code...
-   $sql = "SELECT * FROM `users`";
-   if ( !($_SESSION["userrole"] == 'admin'))
-   {
-      $sql .= " WHERE `id` = ".$_SESSION["id"];
-   }
-
-   // Vuur de query af op de database
-   // code...
-   $result = mysqli_query($conn, $sql);
-
-   $innerTable = "";
-   while ( $record = mysqli_fetch_array($result, MYSQLI_ASSOC))
-   {
-      $innerTable .= "<tr>
-                        <td>".$record["id"]."</td>
-                        <td>".$record["firstname"]."</td>
-                        <td>".$record["infix"]."</td>
-                        <td>".$record["lastname"]."</td>
-                        <td><a href='index.php?content=change_password&id=".$record["id"]."'><img src='./images/b_edit.png' alt='potlood'></a></td>";
-   }
-?>
-
-
-
-<table>
-   <tr>
-      <th>id</th>
-      <th>Voornaam</th>
-      <th>tussenvoegsel</th>
-      <th>Achternaam</th>
-      <th></th>
-   </tr>
-   <?php echo $innerTable; ?>
-</table>
-
+}

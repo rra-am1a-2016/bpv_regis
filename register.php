@@ -20,3 +20,4 @@
   </div>
 </form>
 </p>
+<div class="alert alert-danger" role="alert" id="message"></div>

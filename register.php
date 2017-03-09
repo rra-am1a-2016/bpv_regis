@@ -20,4 +20,3 @@
   </div>
 </form>
 </p>
-<script src="./js/registration.js"></script>

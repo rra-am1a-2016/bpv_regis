@@ -1,4 +1,32 @@
+// Maak een handvat op de button
+var btn = document.getElementById("btn_regis");
+
+// Maak xmlhttprequest object
+var xmlHttp = new XMLHttpRequest();
+
+// Check of er antwoord is gekomen van de server
+xmlHttp.onreadystatechange = function () {
+    
+    alert(xmlHttp.status + " | " + xmlHttp.readyState + xmlHttp.statusText);
+    // Als de pagina is gevonden en de status is goed...
+    if (xmlHttp.status == 200 && xmlHttp.readyState == 4) {
+      // Geef dan de tekst op data.php weer
+      alert("Responsetekst: " + xmlHttp.responseText);
+      console.log(xmlHttp.responseText);
+    }         
+};  
+
+btn.onclick = function () {
+  // Pak het juiste id van het input tag
+  var stdNumber = document.getElementById("leerlingnummer").value;
+  console.log("http://localhost/2016-2017/am1a/Blok%203/Web/bpvregis/data.php?stdNumber=" + stdNumber);
+  xmlHttp.open("GET", "http://localhost/2016-2017/am1a/Blok%203/Web/bpvregis/data.php?stdNumber=" + stdNumber, true);
+  xmlHttp.send();
+}
+
+
 <?php
+   
    if (isset($_GET["stdNumber"]))
    {
      include("connect_db.php");
@@ -9,9 +37,8 @@
 
       $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-      echo $record["id"];
+     // echo $record["firstName"];
 
-/*
      if ($result)
       {
           $emailaddress = $_GET["stdNumber"]."@student.mboutrecht.nl";
@@ -64,10 +91,22 @@
 
       }
       else {
-           
-           //echo "Registreer opnieuw, er is iets misgegaan";
+            /* Wanneer de query niet goed is ontvangen of uitgevoerd, meldt dit 
+           * dan en stuur door naar het registratieformulier */
+           echo "Registreer opnieuw, er is iets misgegaan";
+           //
       }
-   */   
+      
       
    } 
+     
+        
 ?>
+
+          
+          
+          
+          
+      
+
+     

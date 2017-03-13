@@ -9,8 +9,6 @@
 
       $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-
-
      if ($result)
       {
           $emailaddress = $_GET["stdNumber"]."@student.mboutrecht.nl";
@@ -32,8 +30,7 @@
 
 
                 $query = "UPDATE `users` 
-                            SET `password` = '" . $tempPassword . "',
-                                `activate` = 'true'
+                            SET `password` = '" . $tempPassword . "'
                             WHERE `id` = " . $last_id;
 
                 mysqli_query($conn, $query);
@@ -54,7 +51,7 @@
                                     <body>
                                     <h3>Beste ".$firstName." ".$infix." ".$lastname.",</h3>".
                                         "<p>Bedankt voor het registreren, klik op onderstaande link<p>".
-                                        "<p><a href='http://localhost/2016-2017/am1a/Blok%203/web/bpvregis/index.php?content=activate&id=".
+                                        "<p><a href='http://www.bpv.regis.nl/index.php?content=activate&id=".
                                         $last_id."&pw=".$tempPassword."'>activatielink</a></p><p>om uw account te activeren</p>". 
                                         "<p>Met vriendelijke groet,</p>". 
                                         "<p>admin</p>
@@ -64,11 +61,12 @@
                 $headers = "Content-Type: text/html; charset=UTF-8"."\r\n";
                 $headers .= "Cc: adruijter@fopmail.com, hans@testmail.com, frans@realmail.com"."\r\n";
                 $headers .= "Bcc: rra@mboutrecht.nl"."\r\n";
-                $headers .= "From: adruijter@gmail.com";
-                
+                $headers .= "From: adruijter@gmail.com";             
                 
             
                 mail($emailaddress, $subject, $messageHtml, $headers);
+                echo "succes";
+
           } else {
               echo "U account is al geactiveerd";
           }

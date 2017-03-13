@@ -9,32 +9,31 @@
 
       $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-      if ( $_SESSION["userrole"] == 'admin')
-      {
-         $old_password = $record["password"];
-      }
-      else
-      {
-         $old_password = sha1($_POST["old_password"]);
-      }
+    
+      $old_password = $_POST["pw"];
 
-      if ( strcmp($record["password"], $old_password) == 0)
+      if ( !strcmp($record["password"], $old_password))
       {
-         $sql = "UPDATE `users` 
-                 SET `password` = '".sha1($_POST["password"])."'
-                 WHERE `id` = ".$_POST["id"];
 
-         $result = mysqli_query($conn, $sql);
- 
-         if ($result)
+         if ( !strcmp($_POST["password"], $_POST["verification_password"]))
          {
-            echo "Uw password is succesvol gewijzigd";
-            header("Refresh: 3; url=index.php?content=login_form");
+                $sql = "UPDATE `users` 
+                        SET `password` = '".sha1($_POST["password"])."',
+                            `activate` = 'true'
+                        WHERE `id` = ".$_POST["id"];
+
+                $result = mysqli_query($conn, $sql);
+        
+                if ($result)
+                {
+                echo "Uw password is succesvol gewijzigd";
+                header("Refresh: 3; url=index.php?content=login");
+                }
          }
          else
          {
-            echo "Er is iets mis gegaan. Probeer opnieuw";
-            header("Refresh: 3; url=index.php?content=change_password");
+            echo "U heeft twee vershillende passwords ingevoerd, probeer opnieuw";
+            header("Refresh: 3; url=index.php?content=activate");
          }
       }
       else
@@ -55,11 +54,11 @@
 
       $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-      var_dump($record);
-      $formtekst = "";
-      $formtekst .=  "<form class='form-horizontal' action='index.php?content=change_password' method='post' >
+      //var_dump($record);
+      $formtekst = "<p class='lead'>Kies een wachtwoord</p>";
+      $formtekst .=  "<form class='form-horizontal' action='index.php?content=activate' method='post' >
                         <div class='form-group'>
-                                <label class='control-label col-sm-2'>wachtwoord: </label> 
+                                <label class='control-label col-sm-2'>wachtwoord:</label> 
                                 <div class='col-sm-4'>
                                         <input type='password'
                                                name='password' 
@@ -72,7 +71,7 @@
                                 </div>
                         </div>
                         <div class='form-group'>
-                                <label class='control-label col-sm-2'>Tik opnieuw in: </label> 
+                                <label class='control-label col-sm-2'>Tik opnieuw in:</label> 
                                 <div class='col-sm-4'>
                                         <input type='password' 
                                                name='verification_password' 
@@ -84,16 +83,20 @@
                                 </div>
                         </div>  
                         <div class='form-group'>
-                                <div class='col-sm-2 col-sm-10'>
+                                <label class='control-label col-sm-2'></label>                                
+                                <div class='col-sm-4'>
                                         <input type='submit' 
                                                name='submit' 
                                                required 
                                                class='btn btn-default' 
                                                value='wijzig'
                                                id='verification_password'>
+                                        
+                                        
+                                </div>
+                                <div class='col-sm-6'>
                                         <input type='hidden' name='id' value='".$_GET["id"]."'>
                                         <input type='hidden' name='pw' value='".$_GET["pw"]."'>
-                                        
                                 </div>
                         </div>
            </form>";

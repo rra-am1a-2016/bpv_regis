@@ -8,7 +8,7 @@ var xmlHttp = new XMLHttpRequest();
 
 // Check of er antwoord is gekomen van de server
 xmlHttp.onreadystatechange = function () {    
-    //alert(xmlHttp.status + " | " + xmlHttp.readyState + xmlHttp.statusText);
+    alert(xmlHttp.status + " | " + xmlHttp.readyState);
     // Als de pagina is gevonden en de status is goed...
     if (xmlHttp.status == 200 && xmlHttp.readyState == 4) {
       alert(xmlHttp.status + " | " + xmlHttp.readyState);
@@ -23,8 +23,9 @@ xmlHttp.onreadystatechange = function () {
 btn.onclick = function () {
   // Pak het juiste id van het input tag
   var stdNumber = document.getElementById("leerlingnummer").value;
-  var url = "http://localhost/2016-2017/am1a/Blok%203/Web/bpvregis/data.php?stdNumber=" + stdNumber;
+  var url = "data.php?stdNumber=" + stdNumber;
   console.log(url);
   xmlHttp.open("GET", url, true);
   xmlHttp.send();
+  return false;
 }

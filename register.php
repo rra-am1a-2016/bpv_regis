@@ -4,7 +4,7 @@
 
 <p class="lead">U kunt zich hier registreren</p>
 <p>
-<form class="form-horizontal" method="" action="">
+<form class="form-horizontal">
   <div class="form-group">
     <label class="control-label col-sm-2" for="email">Studentnummer: </label>
     <div class="col-sm-4">
@@ -15,7 +15,7 @@
   </div>  
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
-      <button id="btn_regis" type="submit" class="btn btn-default">Submit</button>
+      <button id="btn_regis" class="btn btn-default">Submit</button>
     </div>
   </div>
 </form>

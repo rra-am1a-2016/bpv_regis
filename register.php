@@ -20,4 +20,6 @@
   </div>
 </form>
 </p>
-<div class="alert alert-danger" role="alert" id="message"></div>
+<div class="alert alert-success" role="alert" id="alert_is_activated">
+  Uw account is succesvol geactiveerd. Klik <a href="index.php?content=login" class="alert-link">hier</a> om in te loggen
+</div>

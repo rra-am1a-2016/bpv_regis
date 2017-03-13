@@ -1,22 +1,26 @@
 // Maak een handvat op de button
 var btn = document.getElementById("btn_regis");
-var msg = document.getElementById("message");
-msg.style.display = "none";
 
 // Maak xmlhttprequest object
 var xmlHttp = new XMLHttpRequest();
 
 // Check of er antwoord is gekomen van de server
 xmlHttp.onreadystatechange = function () {    
-    alert(xmlHttp.status + " | " + xmlHttp.readyState);
+    //alert(xmlHttp.status + " | " + xmlHttp.readyState);
     // Als de pagina is gevonden en de status is goed...
     if (xmlHttp.status == 200 && xmlHttp.readyState == 4) {
-      alert(xmlHttp.status + " | " + xmlHttp.readyState);
       // Geef dan de tekst op data.php weer
-      alert("Responsetekst: " + xmlHttp.responseText);
-      //msg.style.display = "Block";
-      //msg.innerHTML = xmlHttp.responseText;
-      //window.location = "http://localhost/2016-2017/am1a/Blok%203/Web/bpvregis/index.php?content=register";
+      //alert("Responsetekst: " + xmlHttp.responseText);
+      if ( xmlHttp.responseText.trim() == "succes") {
+        // Toon de groene alert
+        document.getElementById("alert_is_activated").style.display = "block";
+        
+        // Stuur mij door na 4 seconden.
+        setTimeout(function () {
+          window.location.href = "index.php?content=login";
+        }, 4000);
+      }
+      
     }         
 };  
 

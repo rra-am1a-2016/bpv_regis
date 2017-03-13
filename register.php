@@ -23,3 +23,7 @@
 <div class="alert alert-success" role="alert" id="alert_is_activated">
   Uw account is succesvol geactiveerd. Klik <a href="index.php?content=login" class="alert-link">hier</a> om in te loggen
 </div>
+<div class="alert alert-danger" role="alert" id="alert_already_activated">
+  Uw account is al geactiveerd. U wordt doorgestuurd naar de login pagina.
+  Klik <a href="index.php?content=login" class="alert-link">hier</a> om nu in te loggen.
+</div>

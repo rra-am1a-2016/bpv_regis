@@ -1,3 +1,7 @@
 #alert_is_activated {
    display: none;
 }
+
+#alert_already_activated {
+   display: none;
+}

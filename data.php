@@ -73,7 +73,9 @@
       }
       else {
            
-           echo "Het door u opgegeven studentnummer is niet bekent in de database";
+           echo "studentnummer niet bekent";
       }
-   } 
+   } else {
+       echo "geen studentnummer ingevuld";
+   }
 ?>

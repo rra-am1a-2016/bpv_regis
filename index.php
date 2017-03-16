@@ -20,6 +20,9 @@
     <!-- Custom styles for this template -->
     <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
 
+    <!-- Custom styles for signin template -->
+    <link href="./css/signin.css" rel="stylesheet">
+
     <!-- My self written css for this project -->
     <link href="./css/custom.css" rel="stylesheet">
 
@@ -52,7 +55,6 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="./index.php?content=home">Home</a></li>
             <li><a href="./index.php?content=about">About</a></li>
-            <li><a href="./index.php?content=register">Registratie</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -65,6 +67,8 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
+            <li><a href="./index.php?content=register">Registratie</a></li>
+            <li><a href="./index.php?content=login">Inloggen</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

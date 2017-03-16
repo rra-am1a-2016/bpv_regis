@@ -5,3 +5,7 @@
 #alert_already_activated {
    display: none;
 }
+
+#alert_no_stdNumber {
+   display: none;
+}

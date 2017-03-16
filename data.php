@@ -1,16 +1,25 @@
 <?php
-   if (isset($_GET["stdNumber"]))
+   if (isset($_GET["stdNumber"]) && $_GET["stdNumber"] != "")
    {
-     include("connect_db.php");
+      // Maak contact met de mysql server
+      include("connect_db.php");
       
+      // Selecter het record op basis van het id
       $query = "SELECT * FROM `users` WHERE `id` = " . $_GET["stdNumber"];
 
-      $result = mysqli_query($conn, $query);
+      // Vuur de query af op de database
+      $result = mysqli_query($conn, $query);    
+    
+      // Kijk of er een record is gevonden
+      $record_found =  mysqli_num_rows($result);
 
-      $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-     if ($result)
+      // Als er een record is gevonden...
+      if ($record_found)
       {
+          // Stop het record in een associatief array
+          $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+          // Definieer wat variabelen die je gaat gebruiken in de code
           $emailaddress = $_GET["stdNumber"]."@student.mboutrecht.nl";
           $firstName = $record["firstName"];
           $infix = $record["infix"];

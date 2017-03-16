@@ -27,3 +27,7 @@
   Uw account is al geactiveerd. U wordt doorgestuurd naar de login pagina.
   Klik <a href="index.php?content=login" class="alert-link">hier</a> om nu in te loggen.
 </div>
+<div class="alert alert-warning" role="alert" id="alert_no_stdNumber">
+  U heeft geen studentnummer ingevuld. Wilt u dit alsnog doen. Klik 
+  <a href="index.php?content=register" class="alert-link">hier</a> om direct naar de pagina te gaan.
+</div>

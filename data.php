@@ -27,9 +27,12 @@
           $subject = "Activatie account";
           $last_id = $_GET["stdNumber"];
           $activate = $record["activate"];
+          $password = $record["password"];
           
           if ( $activate == 'false') {
                 
+                if ( $password == "") {
+
                 // Maak een random tijdelijk password en haal dit door een sha1 hash
                 $first3OfFirstname = substr($firstName, 0, 3);
                 $last4OfLastname = substr($lastname, (strlen($lastname) - 4), 4);
@@ -75,12 +78,14 @@
             
                 mail($emailaddress, $subject, $messageHtml, $headers);
                 echo "succes";
+                } else {
+                    echo "Activatiemail al gestuurd";
+                }
 
           } else {
               echo "U account is al geactiveerd";
           }
-      }
-      else {
+      } else {
            
            echo "studentnummer niet bekent";
       }

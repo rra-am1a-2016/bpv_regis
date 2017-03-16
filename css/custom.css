@@ -1,11 +1,6 @@
-#alert_is_activated {
-   display: none;
-}
-
-#alert_already_activated {
-   display: none;
-}
-
-#alert_no_stdNumber {
+#alert_is_activated, #alert_already_activated,
+#alert_no_stdNumber, #alert_nonexisting_stdNumber,
+#alert_mail_already_send
+{
    display: none;
 }

@@ -33,8 +33,21 @@ xmlHttp.onreadystatechange = function () {
         setTimeout(function () {
           window.location.href = "index.php?content=register";
         }, 4000);
+      } else if ( xmlHttp.responseText.trim() == "studentnummer niet bekent") {
+        // Toon de groene alert
+        document.getElementById("alert_nonexisting_stdNumber").style.display = "block";        
+        // Stuur mij door na 4 seconden.
+        setTimeout(function () {
+          window.location.href = "index.php?content=register";
+        }, 4000);
+      } else if ( xmlHttp.responseText.trim() == "Activatiemail al gestuurd") {
+        // Toon de groene alert
+        document.getElementById("alert_mail_already_send").style.display = "block";        
+        // Stuur mij door na 4 seconden.
+        setTimeout(function () {
+          window.location.href = "index.php?content=login";
+        }, 4000);
       }
-      
     }         
 };  
 

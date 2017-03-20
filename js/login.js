@@ -9,6 +9,14 @@ $(document).ready(function () {
          alert(xhr.responseText);
          if (xhr.responseText.trim() == "student") {
             window.location.href = "index.php?content=student_home";
+         } else if (xhr.responseText.trim() == "admin") {
+            window.location.href = "index.php?content=admin_home";            
+         } else if (xhr.responseText.trim() == "root") {
+            window.location.href = "index.php?content=root_home";            
+         } else if (xhr.responseText.trim() == "docent") {
+            window.location.href = "index.php?content=docent_home";            
+         } else if (xhr.responseText.trim() == "bpvco") {
+            window.location.href = "index.php?content=bpvco_home";            
          } else if ( xhr.responseText == "error_id") {
             document.getElementById("error_id").style.display = "block";
             setTimeout(function () {
@@ -16,6 +24,11 @@ $(document).ready(function () {
             }, 3000);
          } else if ( xhr.responseText == "error_pw") {
             document.getElementById("error_pw").style.display = "block";
+            setTimeout(function () {
+             window.location.href = "index.php?content=login";               
+            }, 3000);
+         } else if ( xhr.responseText == "error_activate") {
+            document.getElementById("error_activate").style.display = "block";
             setTimeout(function () {
              window.location.href = "index.php?content=login";               
             }, 3000);

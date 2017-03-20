@@ -15,16 +15,16 @@
     <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Custom styles for signin template -->
-    <link href="./css/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 
     <!-- My self written css for this project -->
-    <link href="./css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -67,8 +67,10 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-            <li><a href="./index.php?content=register">Registratie</a></li>
-            <li><a href="./index.php?content=login">Inloggen</a></li>
+            <?php 
+              session_start();
+              include("userrole_links.php");
+            ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

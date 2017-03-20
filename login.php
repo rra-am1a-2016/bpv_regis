@@ -22,3 +22,4 @@
 <div class="alert alert-warning" role="alert" id="error_activate">
   U heeft uw account nog niet geactiveerd. Bekijk uw activatiemail en klik op de link.
 </div>
+

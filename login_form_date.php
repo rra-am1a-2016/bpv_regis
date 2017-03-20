@@ -16,10 +16,12 @@
 
       $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
       //var_dump($record);
-      if ( $record["activate"] === true) {
+      if ( !strcmp($record["activate"], "true")) {
 
-         if ( $record["password"] === $_GET["password"]) {
-
+         if ( !strcmp($record["password"], sha1($_GET["password"]))) {
+            session_start();
+            $_SESSION["id"] = $record["id"];
+            $_SESSION["userrole"] = $record["userrole"];
             echo $record["userrole"];
          } else {
             echo "error_pw";

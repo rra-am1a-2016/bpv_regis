@@ -7,6 +7,19 @@ $(document).ready(function () {
       alert(xhr.status + " | " + xhr.readyState );
       if ( xhr.status == 200 && xhr.readyState == 4) {
          alert(xhr.responseText);
+         if (xhr.responseText.trim() == "student") {
+            window.location.href = "index.php?content=student_home";
+         } else if ( xhr.responseText == "error_id") {
+            document.getElementById("error_id").style.display = "block";
+            setTimeout(function () {
+             window.location.href = "index.php?content=login";               
+            }, 3000);
+         } else if ( xhr.responseText == "error_pw") {
+            document.getElementById("error_pw").style.display = "block";
+            setTimeout(function () {
+             window.location.href = "index.php?content=login";               
+            }, 3000);
+         }
       }
    }
 

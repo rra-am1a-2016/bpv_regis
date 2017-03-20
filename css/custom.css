@@ -1,6 +1,6 @@
 #alert_is_activated, #alert_already_activated,
 #alert_no_stdNumber, #alert_nonexisting_stdNumber,
-#alert_mail_already_send
+#alert_mail_already_send, #error_id, #error_pw, #error_activate
 {
    display: none;
 }

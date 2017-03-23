@@ -21,7 +21,10 @@
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Custom styles for signin template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet"> 
+    
+    <!-- Custom styles for signin template -->
+    <link href="css/bpv_record.css" rel="stylesheet">
 
     <!-- My self written css for this project -->
     <link href="css/custom.css" rel="stylesheet">

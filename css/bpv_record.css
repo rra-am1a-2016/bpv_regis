@@ -80,6 +80,14 @@ body {
   width: 136px;
 }
 
+#error_record_not_saved {
+  display: none;
+}
+
+#succes_record_saved {
+  display: none;
+}
+
 
 
 

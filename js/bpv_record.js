@@ -7,6 +7,11 @@ $(document).ready(function () {
       alert(xhr.status +  " | " + xhr.readyState);
       if (xhr.status == 200 && xhr.readyState == 4) {
          alert(xhr.responseText);
+         if (xhr.responseText == "succes_record_saved") {
+            document.getElementById("succes_record_saved").style.display = "block";
+         } else if (xhr.responseText == "error_record_not_saved") {
+            document.getElementById("error_record_not_saved").style.display = "block";            
+         }
       }
    }
 

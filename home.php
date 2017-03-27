@@ -16,7 +16,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="./images/bird.jpg" alt="Google Doodle" width="460" height="345">
+        <img src="./images/doodles/bird.jpg" alt="Google Doodle" width="460" height="345">
         <div class="carousel-caption">
           <h3>Google Doodle</h3>
           <p>Vogels zijn altijd leuk om naar te kijken</p>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="item">
-        <img src="./images/gitar.jpg" alt="Google Doodle" width="460" height="345">
+        <img src="./images/doodles/gitar.jpg" alt="Google Doodle" width="460" height="345">
         <div class="carousel-caption">
           <h3>Google Doodle</h3>
           <p>Ik speel zelf ook gitaar. Nee geen luchtgitaar.</p>
@@ -32,7 +32,7 @@
       </div>
     
       <div class="item">
-        <img src="./images/JulesVerne.jpg" alt="Google Doodle" width="460" height="345">
+        <img src="./images/doodles/JulesVerne.jpg" alt="Google Doodle" width="460" height="345">
         <div class="carousel-caption">
           <h3>Google Doodle</h3>
           <p>Jule Verne is mijn favoriete schrijver van oude saaie SIFI-verhalen.</p>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="item">
-        <img src="./images/mountain.jpeg" alt="Google Doodle" width="460" height="345">
+        <img src="./images/doodles/mountain.jpeg" alt="Google Doodle" width="460" height="345">
         <div class="carousel-caption">
           <h3>Google Doodle</h3>
           <p>De bergen van Nepal behoren tot de hoogste van wereld. Dhaulaghiri, Fish Tail, Mount Everest, Anapurna</p>

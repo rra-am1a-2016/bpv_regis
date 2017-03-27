@@ -29,6 +29,9 @@
     <!-- My self written css for this project -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <!-- My self written css for this project -->
+    <link href="css/bpv_std_view.css" rel="stylesheet">
+
     <!-- My carousel css RRA -->
     <link href="css/carousel.css" rel="stylesheet">
 

@@ -95,6 +95,9 @@
           Er is een fout opgetreden, neem contact op met de beheerder.
           <a href="#" class="alert-link">...</a>
         </div>
+        <div class="alert alert-danger" role="alert" id="error_company_exists">
+          U heeft dit bedrijf al ingevoerd. Een bedrijf kan maar een keer ingevoerd worden.
+        </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn_bpv">Sla op!</button>
         
 </form>

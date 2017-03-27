@@ -2,6 +2,7 @@
    session_start();
    // Maak contact met de database
    include("connect_db.php");
+   include("sanitize.php");
 
    // Zet de JSON string om naar een associatief array
    $data = json_decode($_GET["jsonstr"], true);
@@ -9,8 +10,8 @@
    $query = "SELECT *
              FROM `bpv_companies` 
              WHERE `student_number` = '" . $_SESSION["id"] . "'
-             AND   `urlCompany` = " . $data["urlCompany"];
-
+             AND   `urlCompany` = '" . $data["urlCompany"] . "'";
+   //echo $query;
    $result = mysqli_query($conn, $query);
 
    if ( mysqli_num_rows($result) == 0 ) {
@@ -29,17 +30,17 @@
                                              `emailContact`, 
                                              `description`) 
                VALUES                      ('" . $_SESSION["id"] . "', 
-                                             '" . $data["nameCompany"] . "', 
-                                             '" . $data["phoneNumberCompany"] . "', 
-                                             '" . $data["nameContact"] . "', 
-                                             '" . $data["mobilePhoneNumber"] . "', 
-                                             '" . $data["address"] . "', 
-                                             '" . $data["addressNumber"] . "', 
-                                             '" . $data["city"] . "', 
-                                             '" . $data["postalCode"] . "', 
-                                             '" . $data["urlCompany"] . "', 
-                                             '" . $data["emailContact"] . "', 
-                                             '" . $data["description"] . "');";
+                                             '" . sanitize($data["nameCompany"]) . "', 
+                                             '" . sanitize($data["phoneNumberCompany"]) . "', 
+                                             '" . sanitize($data["nameContact"]) . "', 
+                                             '" . sanitize($data["mobilePhoneNumber"]) . "', 
+                                             '" . sanitize($data["address"]) . "', 
+                                             '" . sanitize($data["addressNumber"]) . "', 
+                                             '" . sanitize($data["city"]) . "', 
+                                             '" . sanitize($data["postalCode"]) . "', 
+                                             '" . sanitize($data["urlCompany"]) . "', 
+                                             '" . sanitize($data["emailContact"]) . "', 
+                                             '" . sanitize($data["description"]) . "');";
 
       $result = mysqli_query($conn, $query);
 

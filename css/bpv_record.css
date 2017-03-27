@@ -88,6 +88,10 @@ body {
   display: none;
 }
 
+#error_company_exists {
+  display: none;
+}
+
 
 
 

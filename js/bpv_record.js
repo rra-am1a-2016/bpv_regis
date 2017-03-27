@@ -17,7 +17,12 @@ $(document).ready(function () {
             setTimeout(function () {
                window.location.href = "index.php?content=home";
             }, 3000);            
-         }
+         } else if (xhr.responseText == "error_company_exists") {
+            document.getElementById("error_company_exists").style.display = "block";
+            setTimeout(function () {
+               window.location.href = "index.php?content=bpv_record";
+            }, 3000);            
+         }         
       }
    }
 

@@ -4,9 +4,9 @@ $(document).ready(function () {
    var xhr = new XMLHttpRequest();
 
    xhr.onreadystatechange = function () {
-      alert(xhr.status + " | " + xhr.readyState );
+      //alert(xhr.status + " | " + xhr.readyState );
       if ( xhr.status == 200 && xhr.readyState == 4) {
-         alert(xhr.responseText);
+         //alert(xhr.responseText);
          if (xhr.responseText.trim() == "student") {
             window.location.href = "index.php?content=student_home";
          } else if (xhr.responseText.trim() == "admin") {
@@ -40,7 +40,7 @@ $(document).ready(function () {
       var stdNumber = document.getElementById("inputStdNumber").value;
       var password = document.getElementById("inputPassword").value;
       
-      xhr.open("GET", "login_form_date.php?stdNumber=" + stdNumber + "&password=" + password, true);
+      xhr.open("GET", "login_form_data.php?stdNumber=" + stdNumber + "&password=" + password, true);
       xhr.send()
       return false;
    }

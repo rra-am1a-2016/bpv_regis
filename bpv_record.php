@@ -87,13 +87,14 @@
         <textarea id="description" 
                   class="form-control"
                   placeholder="Korte omschrijving van de verwachte werkzaamheden">Ik moet programmeren in C.</textarea>
-
+        <div class="alert alert-success" role="alert" id="succes_record_saved">
+          De informatie is succesvol opgeslagen.
+          <a href="#" class="alert-link">...</a>
+        </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn_bpv">Sla op!</button>
+        
 </form>
-<div class="alert alert-success" role="alert" id="succes_record_saved">
-  De informatie is succesvol opgeslagen.
-  <a href="#" class="alert-link">...</a>
-</div>
+
 <div class="alert alert-danger" role="alert" id="error_record_not_saved">
   Er is een fout opgetreden, neem contact op met de beheerder.
   <a href="#" class="alert-link">...</a>

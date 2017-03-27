@@ -9,6 +9,9 @@ $(document).ready(function () {
          alert(xhr.responseText);
          if (xhr.responseText == "succes_record_saved") {
             document.getElementById("succes_record_saved").style.display = "block";
+            setTimeout(function () {
+               window.location.href = "index.php?content=home";
+            }, 3000);
          } else if (xhr.responseText == "error_record_not_saved") {
             document.getElementById("error_record_not_saved").style.display = "block";            
          }

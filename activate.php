@@ -3,7 +3,7 @@
 
    if ( isset($_POST["submit"]))
    {
-      $sql = "SELECT * FROM `users` WHERE `id` = ".$_POST["id"];
+      $sql = "SELECT * FROM `users` WHERE `id` = '" . $_POST["id"] . "'";
 
       $result = mysqli_query($conn, $sql);
 
@@ -47,7 +47,7 @@
    if ( isset($_GET["id"]))
    {
       // Selecteer het record op basis van een id 
-      $sql = "SELECT * FROM `users` WHERE `id` = ".$_GET["id"];
+      $sql = "SELECT * FROM `users` WHERE `id` = '" . $_GET["id"] . "'";
 
       // Vuur de query af op de database
       $result = mysqli_query($conn, $sql);

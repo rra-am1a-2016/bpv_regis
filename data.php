@@ -5,8 +5,9 @@
       include("connect_db.php");
       
       // Selecter het record op basis van het id
-      $query = "SELECT * FROM `users` WHERE `id` = " . $_GET["stdNumber"];
-
+      $query = "SELECT * FROM `users` WHERE `id` = '" . $_GET["stdNumber"] . "'";
+      
+      //echo $query; exit();
       // Vuur de query af op de database
       $result = mysqli_query($conn, $query);    
     

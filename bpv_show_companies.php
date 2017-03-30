@@ -14,26 +14,22 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Bedrijf</th>
+        <th>Straat</th>
+        <th>Plaats</th>
+        <th>Contactpersoon</th>
+        <th>06-nummer</th>
+        <th>website</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td>Bissmark</td>
+        <td>Zeeweg 42</td>
+        <td>Amsterdam</td>
+        <td>John de Boer</td>
+        <td>06-25703467</td>
+        <td>bissmark.nl</td>
       </tr>
     </tbody>
   </table>

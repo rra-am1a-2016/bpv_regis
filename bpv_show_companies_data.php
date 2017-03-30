@@ -45,7 +45,4 @@
    // De JSON-sting wordt op de pagina weergegeven en is opvraagbaar
    // met xhr.responseText
    echo $jsonStr;
-
-
-
 ?> 

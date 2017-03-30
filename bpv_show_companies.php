@@ -22,15 +22,8 @@
         <th>website</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Bissmark</td>
-        <td>Zeeweg 42</td>
-        <td>Amsterdam</td>
-        <td>John de Boer</td>
-        <td>06-25703467</td>
-        <td>bissmark.nl</td>
-      </tr>
+    <tbody id="bpv_records_data">
+      
     </tbody>
   </table>
 </div>

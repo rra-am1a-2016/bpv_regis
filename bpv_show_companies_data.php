@@ -8,7 +8,21 @@
    $query = "SELECT * FROM `bpv_companies`
              WHERE `student_number` = '" . $_SESSION["id"] . "'";
 
-   echo $query; exit();
+   //echo $query; exit();
+
+   $result = mysqli_query($conn, $query);
+
+   $records = array();
+   if ( $result ) {
+      if ( mysqli_num_rows($result) > 0 ) {
+         $records = mysqli_fetch_all($result, MYSQLI_ASSOC);
+         var_dump($records);
+      } else {
+         echo "no_records_found";
+      }
+   } else {
+      echo "error_database";
+   }
 
 
 

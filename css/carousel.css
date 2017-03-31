@@ -4,3 +4,13 @@
       width: 70%;
       margin: auto;
   }
+
+
+  /* Tooltip */
+.tooltip > .tooltip-inner {
+    background-color: #337ab7; 
+    color: #FFFFFF; 
+    border: 1px solid #337aaa;
+    padding: 15px;
+    font-size: 20px;
+}

@@ -1,7 +1,11 @@
 <div class="page-header">
-   <h1>Welkom op de BPV registratiesite</h1>
+   <h1 class="lead"
+       data-placement="auto" 
+       data-toggle="tooltip">
+          Welkom op de BPV registratiesite
+   </h1>
 </div>
-<p class="lead" data-toggle="tooltip">De BPV registratiesite voor MBO Utrecht studenten</p>
+<p>De BPV registratiesite voor MBO Utrecht studenten</p>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

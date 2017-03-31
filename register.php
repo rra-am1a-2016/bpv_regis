@@ -1,7 +1,12 @@
 <form class="form-signin">
   <h2 class="form-signin-heading">registreren</h2>
     <label class="sr-only" for="email">Studentnummer: </label>
-      <input type="text" class="form-control" id="leerlingnummer" placeholder="studentnummer/docentcode">
+      <input type="text" 
+             class="form-control" 
+             id="leerlingnummer" 
+             placeholder="studentnummer/docentcode"
+             data-toggle='tooltip'
+             data-placement='right'>
       <button id="btn_regis" class="btn btn-lg btn-primary btn-block">Submit</button>
 </form>
 </p>

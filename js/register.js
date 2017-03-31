@@ -60,3 +60,8 @@ btn.onclick = function () {
   xmlHttp.send();
   return false;
 }
+
+$("[data-toggle='tooltip']").tooltip({"delay": {"show": 100, "hide": 100},
+                                      "html": true,
+                                      "title": "<b><u>Studenten:</u></b><br>vul je studentnummer in<br>" +
+                                                "<b><u>Docenten:</u></b><br>vul je lettercode afkorting" });  //css({"border": "20px solid pink"});

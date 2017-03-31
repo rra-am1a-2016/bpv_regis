@@ -31,8 +31,10 @@ $(document).ready(function () {
               }
               tbody.appendChild(tr);
            }           
+        } else if ( message == "no_records_found") {
+           
         }
-        
+
      }
   }
 

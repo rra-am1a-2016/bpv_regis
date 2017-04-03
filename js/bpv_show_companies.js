@@ -15,11 +15,11 @@ $(document).ready(function () {
   xhr.onreadystatechange = function () {
      if ( xhr.readyState == 4 && xhr.status == 200) {
         var data = JSON.parse(xhr.responseText);
-        console.log(data);
+        //console.log(data);
         var message = data.shift();
         //console.log(message);
         var fieldnames = ["nameCompany", "address", "city", "nameContact", "mobilePhoneNumber", "urlCompany"];
-        console.log(fieldnames[0]);
+        //console.log(fieldnames[0]);
         var tbody = document.getElementById("bpv_records_data");
         if ( message == "succes_records_found") {
            for ( var i=0; i<data.length; i++) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
                  var text = document.createTextNode(data[i][fieldnames[j]]);
                  td.appendChild(text);
                  tr.appendChild(td);
-                 console.log(data);
+                 //console.log(data);
               }
               // Maak een array met alle optionteksten erin...
               var optionText = ["nog geen contact", 
@@ -45,6 +45,7 @@ $(document).ready(function () {
 
               // Maak een select tag...
               var select = document.createElement("select");
+              select.setAttribute("class", "form-control");
 
               select.addEventListener("change", updateStatus);
               select.urlCompany = data[i].urlCompany;

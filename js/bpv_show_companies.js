@@ -29,6 +29,42 @@ $(document).ready(function () {
                  tr.appendChild(td);
                  console.log(data);
               }
+              // Maak een array met alle optionteksten erin...
+              var optionText = ["nog geen contact", 
+                                "contact gezocht", 
+                                "contact bevestigd bedrijf", 
+                                "uitgenodigd voor gesprek", 
+                                "sollicitatiegesprek gehad", 
+                                "afgewezen", 
+                                "aangenomen"];
+
+              // Maak aan het einde van de rij een td...
+              var td = document.createElement("td");
+
+              // Maak een select tag...
+              var select = document.createElement("select");
+
+              for (var j=0; j < optionText.length; j++) {
+                  // maak een option tag..
+                  var option = document.createElement("option");
+
+                  // Maak wat tekst voor in de option tag...
+                  var text = document.createTextNode(optionText[j]);
+
+                  // Voeg tekst toe in de option...
+                  option.appendChild(text);
+
+                  // Stop de option tag in de select tag...
+                  select.appendChild(option);
+              }
+
+              // Stop de td in de select tag...
+              td.appendChild(select);
+              
+              // Voeg de td tag toe aan de tr...
+              tr.appendChild(td);
+
+              // Voeg de tr toe aan de table body...
               tbody.appendChild(tr);
            }           
         } else if ( message == "no_records_found") {

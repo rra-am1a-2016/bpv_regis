@@ -20,6 +20,7 @@
         <th>Contactpersoon</th>
         <th>06-nummer</th>
         <th>website</th>
+        <th>status</th>
       </tr>
     </thead>
     <tbody id="bpv_records_data">

@@ -1,3 +1,5 @@
+var xhr = new XMLHttpRequest();
+
 $(document).ready(function () {
    //alert("Hoi dit is een test");
 
@@ -8,12 +10,12 @@ $(document).ready(function () {
       xhr.onreadystatechange 
    */
 
-  var xhr = new XMLHttpRequest();
+  
 
   xhr.onreadystatechange = function () {
      if ( xhr.readyState == 4 && xhr.status == 200) {
         var data = JSON.parse(xhr.responseText);
-        //console.log(data);
+        console.log(data);
         var message = data.shift();
         //console.log(message);
         var fieldnames = ["nameCompany", "address", "city", "nameContact", "mobilePhoneNumber", "urlCompany"];
@@ -44,12 +46,24 @@ $(document).ready(function () {
               // Maak een select tag...
               var select = document.createElement("select");
 
-              for (var j=0; j < optionText.length; j++) {
+              select.addEventListener("change", updateStatus);
+              select.urlCompany = data[i].urlCompany;
+
+              for (var n=0; n < optionText.length; n++) {
                   // maak een option tag..
                   var option = document.createElement("option");
 
+                  // Voeg een attribuut value toe aan ieder option tag...
+                  option.setAttribute("value", n)
+
+                  // Als de optionvalue uit de database matched met de optionvalue die gemaakt wordt
+                  // Voeg dan het attribuut selected toe...
+                  if ( data[i].status == n ) {
+                    option.setAttribute("selected", true);
+                  }
+
                   // Maak wat tekst voor in de option tag...
-                  var text = document.createTextNode(optionText[j]);
+                  var text = document.createTextNode(optionText[n]);
 
                   // Voeg tekst toe in de option...
                   option.appendChild(text);
@@ -78,3 +92,10 @@ $(document).ready(function () {
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send();
 });
+
+function updateStatus (evt) {
+  var status = evt.target.options[evt.target.options.selectedIndex].value;
+  xhr.open("POST", "bpv_show_companies_data_update.php", true);
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.send("status=" + status + "&urlCompany=" + evt.target.urlCompany);
+}

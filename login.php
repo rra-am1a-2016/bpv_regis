@@ -1,7 +1,13 @@
 <form class="form-signin">
         <h2 class="form-signin-heading">Inloggen</h2>
         <label for="inputStdNumber" class="sr-only">Student nummer</label>
-        <input type="text" id="inputStdNumber" class="form-control" placeholder="studentnummer/docentcode" required autofocus>
+        <input type="text" 
+               id="inputStdNumber" 
+               class="form-control" 
+               placeholder="studentnummer/docentcode"
+               data-toggle="popover"
+               required 
+               autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="new-password" required>
         <div class="checkbox">

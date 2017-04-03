@@ -44,4 +44,10 @@ $(document).ready(function () {
       xhr.send()
       return false;
    }
+
+   $("[data-toggle='popover']").popover({"trigger": "hover",
+                                         "title": "Inloginformatie",
+                                         "content": "<span style='font-weight: bold; font-style:italic;'>Studenten:</span> log in met je studentnummer<br>" +
+                                                    "<span style='font-weight: bold; font-style:italic;'>Docenten:</span> log in met je lettercode afkorting",
+                                         "html": true});
 });

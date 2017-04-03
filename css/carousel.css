@@ -14,3 +14,23 @@
     padding: 15px;
     font-size: 20px;
 }
+
+/* Popover */
+.popover {
+    /*border: 2px solid #337aaa;*/
+}
+
+/* Popover Header */
+.popover-title {
+    background-color: #337ab7;  
+    color: #FFFFFF; 
+    font-size: 28px;
+    text-align:center;
+}
+
+/* Popover Body */
+.popover-content {
+    background-color: #ffffff;
+    padding: 25px;
+}
+

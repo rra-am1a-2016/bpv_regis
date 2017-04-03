@@ -63,7 +63,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="./index.php?content=home">Home</a></li>
-            <li><a href="./index.php?content=about">About</a></li>
+            <li ><a href="./index.php?content=about">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -110,6 +110,7 @@
     <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./js/nav.js"></script>
     <?php include("script_loader.php") ?>;
   </body>
 </html>

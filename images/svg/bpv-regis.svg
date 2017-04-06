@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="bpv-regis-inkscape.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="476.99842"
+     inkscape:cy="764.92508"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Laag 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       id="rect10"
+       width="84.755684"
+       height="18.983887"
+       x="36.122238"
+       y="61.106499"
+       style="fill:#ffffff;stroke-width:0.10680047" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:9.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0.03175px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="42.763123"
+       y="73.562683"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         x="42.763123"
+         y="73.562683"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;font-family:Montserrat;-inkscape-font-specification:Montserrat;stroke-width:0.26458332">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.97350311px;line-height:9.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0.03144038px;word-spacing:0px;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.26200318"
+       x="176.0499"
+       y="42.436981"
+       id="text24"
+       transform="scale(0.64221464,1.5571118)"><tspan
+         sodipodi:role="line"
+         id="tspan22"
+         x="176.0499"
+         y="42.436981"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.68542719px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#b3b3b3;stroke-width:0.26200318">NL</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke-width:0.25023192"
+       id="rect97"
+       width="45.302185"
+       height="21.515198"
+       x="67.48555"
+       y="57.526493"
+       ry="3.0735996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:9.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0.03175px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       x="70.692802"
+       y="72.092682"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         x="70.692802"
+         y="72.092682"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#ffffff;stroke-width:0.26458332;">Regis</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;line-height:9.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0.03175px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="54.122082"
+       y="72.359962"
+       id="text107"><tspan
+         sodipodi:role="line"
+         id="tspan105"
+         x="54.122082"
+         y="72.359962"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;font-family:Montserrat;-inkscape-font-specification:Montserrat;stroke-width:0.26458332">pv</tspan></text>
+  </g>
+</svg>

@@ -22,6 +22,7 @@ xmlHttp.onreadystatechange = function () {
       // Haal de data binnen
       data = JSON.parse(xmlHttp.responseText);
       
+      
       // Teken de staafdiagrammen
       drawCanvas();
    }
@@ -41,13 +42,16 @@ var colorArray = ["blue", "green", "yellow", "red", "orange", "purple", "grey", 
 
 // Math.floor(), Math.random() *
 function drawCanvas () {
+    
+
    arrayLength = data.length;
+   
    context.clearRect(0, 0, canvas.width, canvas.height);
+   
    for ( var i = 0; i < arrayLength; i++ )
    {
       // Geef het te tekenen object een kleur
       context.fillStyle = randomColor(colorArray);
-      console.debug(data);
       // Teken een rechthoek met het context-object.
       var x = 60 + i * 30;
       var y = 360;
@@ -103,7 +107,6 @@ function drawCanvas () {
    context.fillText("aantal geschikte bedrijven --->", 0, 0);
    // Draai het canvas weer terug naar de oude positie
    context.restore();
-   
 }
 
 // Haal de (x,y)-waarde van de muispositie op ten opzichte van het canvas
@@ -124,6 +127,7 @@ canvas.addEventListener('mousemove', function(evt) {
    var length = data.length;
    for ( var i = 0; i < length; i++)
    {
+       console.log(data[i].coordinates.x);
       if (  mousePos.x > data[i].coordinates.x && 
             mousePos.x < data[i].coordinates.x + data[i].coordinates.dx &&
             mousePos.y < data[i].coordinates.y && 
@@ -150,7 +154,7 @@ function randomColor (colorArray) {
 
 getData();
 
-setInterval(getData, 1000);
+setInterval(getData, 20000);
 
 function getData () {
    xmlHttp.open("GET", "bpv_std_view_data.php", true);

@@ -13,7 +13,7 @@
     
       // Kijk of er een record is gevonden
       $record_found =  mysqli_num_rows($result);
-
+      //echo $record_found;
       // Als er een record is gevonden...
       if ($record_found)
       {
@@ -21,7 +21,11 @@
           $record = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
           // Definieer wat variabelen die je gaat gebruiken in de code
-          $emailaddress = $_GET["stdNumber"]."@student.mboutrecht.nl";
+          if (is_numeric($_GET["stdNumber"])) {
+            $emailaddress = $_GET["stdNumber"]."@student.mboutrecht.nl";
+          } else {
+            $emailaddress = $_GET["stdNumber"]."@mboutrecht.nl";            
+          }
           $firstName = $record["firstName"];
           $infix = $record["infix"];
           $lastname = $record["lastName"];
@@ -44,8 +48,8 @@
 
                 $query = "UPDATE `users` 
                             SET `password` = '" . $tempPassword . "'
-                            WHERE `id` = " . $last_id;
-
+                            WHERE `id` = '" . $last_id . "'";
+                //echo $query; exit();
                 mysqli_query($conn, $query);
 
                 $messageHtml = "<!DOCTYPE html>

@@ -9,9 +9,13 @@
             echo "<li><a href='./index.php?content=bpv_std_view'>BPV student overzicht</a></li>";
             break;
       }
-      echo "<li><a href='./index.php?content=logout'>uitloggen</a></li>";      
+      echo "<li><a href='./index.php?content=logout'>
+                  <span class='glyphicon glyphicon-log-out'></span>uitloggen</a></li>";      
    } else {
       echo "<li><a href='./index.php?content=register'>Registratie</a></li>";
-      echo "<li><a href='./index.php?content=login'>Inloggen</a></li>";
+      echo "<li><span class='glyphicon glyphicon-log-in'>
+                  </span><a href='./index.php?content=login'>Inloggen
+                </a>
+            </li>";
    }
 ?>

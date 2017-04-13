@@ -20,10 +20,10 @@
                 $sql = "UPDATE `users` 
                         SET `password` = '".sha1($_POST["password"])."',
                             `activate` = 'true'
-                        WHERE `id` = ".$_POST["id"];
-
+                        WHERE `id` = '".$_POST["id"]."'";
+                
                 $result = mysqli_query($conn, $sql);
-        
+                //echo $sql . $result; exit();
                 if ($result)
                 {
                 echo "Uw password is succesvol gewijzigd";
@@ -32,14 +32,14 @@
          }
          else
          {
-            echo "U heeft twee vershillende passwords ingevoerd, probeer opnieuw";
-            header("Refresh: 3; url=index.php?content=activate");
+            echo "U heeft twee verschillende passwords ingevoerd, probeer opnieuw";
+            header("Refresh: 3; url=index.php?content=activate&id=".$_POST["id"]."&pw=".$old_password);
          }
       }
       else
       {
          echo "Uw oude password klopt niet. Probeer het opnieuw";
-         header("Refresh: 4; url=index.php?content=change_password&id=".$_POST["id"]);
+         header("Refresh: 4; url=index.php?content=activate&id=".$_POST["id"]."&pw=".$old_password);
       }
 
    }

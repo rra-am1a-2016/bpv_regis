@@ -19,15 +19,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-      <div class="item active">
-                  <img src="./images/svg/test123.svg" type="image/svg+xml" ></object>         
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="item">
+     <div class="item active">
         <img src="./images/doodles/bird.jpg" alt="Google Doodle" width="460" height="345">
         <div class="carousel-caption">
           <h3>Google Doodle</h3>

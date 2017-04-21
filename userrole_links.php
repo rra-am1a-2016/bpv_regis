@@ -8,6 +8,9 @@
          case "bpvco":
             echo "<li><a href='./index.php?content=bpv_std_view'>BPV student overzicht</a></li>";
             break;
+          case "admin":
+            echo "<li><a href='./index.php?content=userrole'>Gebruikersrollen</a></li>";
+            break;
       }
       echo "<li><a href='./index.php?content=logout'>
                   <span class='glyphicon glyphicon-log-out'></span>uitloggen</a></li>";      
